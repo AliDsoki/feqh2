@@ -16,7 +16,7 @@ android {
 
     buildTypes {
         release {
-            isMinifyEnabled = false
+            minifyEnabled = false
             proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
         }
     }
@@ -26,7 +26,6 @@ android {
         targetCompatibility = JavaVersion.VERSION_17
     }
 
-    // Keep the big HTML file uncompressed-friendly / avoid asset compression issues
     androidResources {
         noCompress += "html"
     }
