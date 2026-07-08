@@ -26,6 +26,7 @@ android {
         targetCompatibility = JavaVersion.VERSION_17
     }
 
+    // Keep the big HTML file uncompressed-friendly / avoid asset compression issues
     androidResources {
         noCompress += "html"
     }
@@ -33,5 +34,4 @@ android {
 
 dependencies {
     implementation("androidx.appcompat:appcompat:1.7.0")
-    implementation("androidx.webkit:webkit:1.11.0")
 }
